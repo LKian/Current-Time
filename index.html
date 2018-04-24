@@ -4,54 +4,16 @@
   <head>
 
     <title>Current Time</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <script type="text/javascript" src="assets/js/lib/jquery-3.2.1.min.js"></script>
 
-    <style>
-    @import url('https://fonts.googleapis.com/css?family=Quicksand');
-  </style>
   </head>
   <body>
+    <div class="container">
+      <h1 id="time"></h1>
+    </div>
+      <script type="text/javascript" src="assets/js/index.js"></script>
 
-  	<script type="text/javascript">
-  		function printTime() {
-  			var now = new Date;
-  			var hours = now.getHours();
-  			var minutes = now.getMinutes();
-  			var seconds = now.getSeconds();  
-
-
-  			//if current hour is squal to 12, then it's PM
-  			if (hours==12) {
-  				ampm="PM" }
-  			//if current hour is before 12, then it's AM
-  			if (hours<12) {
-  				ampm="AM" }
-
-  			//if current hour is equal to 12, add 12 & it's AM
-  			if (hours==0) {
-  				ampm="AM"
-  				hours+=12 }
-  			//if current hour is over 12, subtract 12, and it's PM
-  			if (hours>12) {
-  				ampm="PM"
-  				hours-=12 }
-
-  			
-
-  			//if minute is single digit, add a 0 in the front
-  			if(minutes<10) {
-  				minutes= "0"+minutes; } 		 
-  			
-  			//if second is single digit, add a 0 in the front
-			if(seconds<10) {
-  				seconds= "0"+seconds; } 	 
-
-  			return (hours+":"+minutes+":"+seconds + " " + ampm);
-
-  		}
-
-
-  		document.write(printTime());
-  	</script>
   </body>
   </html>
